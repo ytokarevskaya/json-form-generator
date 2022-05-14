@@ -1,0 +1,72 @@
+{
+  "title": "Order gizmos",
+  "items": [
+    {
+      "id": "name",
+      "type": "text",
+      "label": "Name",
+      "placeholder": "Your name and surname"
+    },
+    {
+      "id": "email",
+      "type": "text",
+      "label": "Email",
+      "placeholder": "email@example.com"
+    },
+    {
+      "id": "count",
+      "type": "number",
+      "label": "Items count",
+      "placeholder": "The number of items must be greater than 0"
+    },
+    {
+      "id": "address",
+      "type": "textarea",
+      "label": "Delivery address",
+      "placeholder": "Full delivery address"
+    },
+    {
+      "id": "date",
+      "type": "date",
+      "label": "Delivery date"
+    },
+    {
+      "id": "payment",
+      "type": "radio",
+      "label": "Payment method",
+      "radioOptions": [
+        {
+          "label": "Credit card",
+          "value": "card"
+        },
+        {
+          "label": "PayPal",
+          "value": "paypal"
+        },
+        {
+          "label": "Cash",
+          "value": "cash"
+        }
+      ]
+    },
+    {
+      "id": "terms",
+      "type": "checkbox",
+      "label": "I consider the terms of user agreement"
+    }
+  ],
+  "buttons": [
+    {
+      "id": "cancel",
+      "label": "Cancel"
+    },
+    {
+      "id": "reset",
+      "label": "Reset"
+    },
+    {
+      "id": "send",
+      "label": "Send order"
+    }
+  ]
+}

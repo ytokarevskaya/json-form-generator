@@ -1,0 +1,13 @@
+.wrapper {
+	width: 100%;
+
+	> section {
+		border: 1px solid #d0d0d0;
+	}
+}
+
+.error {
+	margin-top: 12px;
+	color: #c21c1c;
+	font-style: italic;
+}

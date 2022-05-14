@@ -1,0 +1,59 @@
+.formTitle {
+	margin-top: 0;
+	font-size: 22px;
+}
+
+.form {
+	padding: 20px;
+	border: 1px solid #d0d0d0;
+	border-radius: 6px;
+
+	label {
+		font-size: 15px;
+	}
+
+	input, textarea {
+		border: 1px solid #d0d0d0;
+		border-radius: 6px;
+		padding: 5px 7px;
+	}
+
+	textarea {
+		resize: none;
+	}
+}
+
+.controlWrapper {
+	display: grid;
+	grid-template-columns: 170px auto;
+	grid-gap: 10px;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.radioButtons {
+	display: flex;
+	column-gap: 10px;
+}
+
+.buttons {
+	display: flex;
+	column-gap: 10px;
+	justify-content: flex-end;
+	margin-top: 25px;
+}
+
+.button {
+	background: #54d3ff;
+	color: #fff;
+	font-weight: bold;
+	font-size: 15px;
+	border: none;
+	padding: 7px 15px;
+	border-radius: 6px;
+	cursor: pointer;
+
+	&:hover {
+		background: #4abce4;
+	}
+}
