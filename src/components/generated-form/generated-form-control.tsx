@@ -7,10 +7,11 @@ const GeneratedFormControl = ({id, type, placeholder, radioOptions}: ControlT) =
 	const renderRadioButtons = (radioOptions: Array<RadioButtonT> | undefined) => {
 		return <div className={css.radioButtons} data-testid='radioButtons'>
 			{(radioOptions || []).map(radio => {
+				const {value, label} = radio
 				return (
-					<span key={radio.value}>
-						<input type='radio' id={id} name={id} value={radio.value} data-testid='radioButton' />
-						<label htmlFor={id}>{radio.label}</label>
+					<span key={value}>
+						<input type='radio' id={value} name={id} value={value} data-testid='radioButton' />
+						<label htmlFor={value}>{label}</label>
 					</span>
 				)
 			})}
