@@ -1,4 +1,4 @@
-import React, { SyntheticEvent } from 'react'
+import React from 'react'
 
 import type {ConfigT} from '../../const/types'
 import GeneratedFormControl from './generated-form-control'
@@ -22,7 +22,7 @@ const GeneratedForm = ({configuration}: GeneratedFormPropsT) => {
 		)
 	}
 
-	const handleFormSubmit = (e: SyntheticEvent) => {
+	const handleFormSubmit = (e: React.SyntheticEvent) => {
 		e.preventDefault()
 	}
 
@@ -65,4 +65,4 @@ const GeneratedForm = ({configuration}: GeneratedFormPropsT) => {
 }
 
 GeneratedForm.displayName = 'GeneratedForm'
-export default GeneratedForm
+export default React.memo(GeneratedForm)

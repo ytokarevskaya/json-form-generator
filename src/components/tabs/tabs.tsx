@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tab } from './tab'
+import {Tab} from './tab'
 
 import css from './tabs.module.scss'
 
@@ -20,12 +20,16 @@ export const Tabs = ({
 
 	const tabs = React.Children.map(children, (child, index) => {
 		if (React.isValidElement(child)) {
+			const handleTabClick = () => {
+				handleTabChange(index)
+			}
+
 			return (
 				<Tab
 					{...child.props}
 					key={child.props.label}
 					isActive={activeTabIndex === index}
-					onClick={() => handleTabChange(index)}
+					onClick={handleTabClick}
 				/>
 			)
 		}
@@ -35,9 +39,9 @@ export const Tabs = ({
 	const content = tabs?.length ? tabs[activeTabIndex].props.children : null
 
 	return (
-		<div className={css.tabsContainer}>
+		<div className={css.tabsContainer} data-testid='tabsContainer'>
 			<div className={css.tabs}>{tabs}</div>
-			{content && <div className={css.content}>{content}</div>}
+			{content && <div className={css.content} data-testid='tabsContent'>{content}</div>}
 		</div>
 	)
 }

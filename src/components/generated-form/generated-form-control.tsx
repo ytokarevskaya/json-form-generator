@@ -37,4 +37,4 @@ const GeneratedFormControl = ({id, type, placeholder, radioOptions}: ControlT) =
 }
 
 GeneratedFormControl.displayName = 'GeneratedFormControl'
-export default GeneratedFormControl
+export default React.memo(GeneratedFormControl)
