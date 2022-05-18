@@ -1,4 +1,4 @@
-import React, { ReactElement, useState } from 'react'
+import React, { ReactElement, useState, useCallback } from 'react'
 import useLocalStorage from '../../hooks/local-storage'
 import {Tabs, Tab} from '../../components/tabs'
 import Editor from '../../components/editor'
@@ -12,6 +12,10 @@ const Main = (): ReactElement => {
 	const [isConfigValid, setConfigValid] = useState(true)
 	const [configuration, setConfiguration] = useLocalStorage('formGeneratorConfig', JSON.stringify(sampleData, null, 2))
 
+	const showResultTab = useCallback(() => {
+		setActiveTab(1)
+	}, [])
+
 	return (
 		<main className={css.main} data-testid='main'>
 			<Tabs activeTabIndex={activeTab} setActiveTabIndex={setActiveTab}>
@@ -21,6 +25,7 @@ const Main = (): ReactElement => {
 						setConfiguration={setConfiguration}
 						isConfigValid={isConfigValid}
 						setConfigValid={setConfigValid}
+						showResultTab={showResultTab}
 					/>
 				</Tab>
 				<Tab label='Result' isDisabled={!isConfigValid} data-testid='tab'>

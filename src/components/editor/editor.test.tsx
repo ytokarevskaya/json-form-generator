@@ -9,6 +9,7 @@ test('renders editor', () => {
 			isConfigValid
 			setConfigValid={() => {}}
 			setConfiguration={() => {}}
+			showResultTab={() => {}}
 		/>)
   const editor = screen.getByTestId('editor')
 	expect(editor).toBeInTheDocument()
@@ -20,6 +21,7 @@ test('renders editor and error message when config is invalid', () => {
 			isConfigValid={false}
 			setConfigValid={() => {}}
 			setConfiguration={() => {}}
+			showResultTab={() => {}}
 		/>
 	)
 	const editor = screen.getByTestId('editor')

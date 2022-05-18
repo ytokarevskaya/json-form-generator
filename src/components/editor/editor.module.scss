@@ -11,3 +11,24 @@
 	color: #c21c1c;
 	font-style: italic;
 }
+
+.button {
+	background: #54d3ff;
+	color: #fff;
+	font-weight: bold;
+	font-size: 15px;
+	border: none;
+	padding: 7px 15px;
+	margin-top: 12px;
+	border-radius: 6px;
+	cursor: pointer;
+
+	&.disabled {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+
+	&:hover {
+		background: #4abce4;
+	}
+}
