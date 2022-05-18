@@ -11,7 +11,7 @@ type GeneratedFormPropsT = {
 const GeneratedForm = ({configuration}: GeneratedFormPropsT) => {
 	const configObj: ConfigT = configuration && JSON.parse(configuration)
 
-	const {title, items, buttons} = configObj
+	const {title, items, buttons} = configObj || {}
 	const isConfigEmpty = !title && !items && !buttons
 
 	if (isConfigEmpty) {
@@ -33,6 +33,7 @@ const GeneratedForm = ({configuration}: GeneratedFormPropsT) => {
 				{items?.length && (
 					<div data-testid='formControls'>
 						{items.map(control => {
+							if (!control) return null
 							const {id, label} = control
 							return (
 								<div className={css.controlWrapper} key={id} data-testid='controlWrapper'>
